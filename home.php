@@ -1,76 +1,27 @@
 <!DOCTYPE html">
-<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 	<title>Welcome to TMN</title>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<link rel="shortcut icon" href="css/images/favicon.ico" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
-	<script src="https://www.google.com/jsapi"></script>
 	<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
 	<!--[if IE 6]>
 		<script type="text/javascript" src="js/png-fix.js"></script>
 	<![endif]-->
 	<script type="text/javascript" src="js/functions.js"></script>
-	    <script type="text/javascript">
-      
-      // This code generates a "Raw Searcher" to handle search queries. The Raw 
-      // Searcher requires you to handle and draw the search results manually.
-      google.load('search', '1');
-
-      var newsSearch;
-
-      function searchComplete() {
-
-        // Check that we got results
-        document.getElementById('content').innerHTML = '';
-        if (newsSearch.results && newsSearch.results.length > 0) {
-          for (var i = 0; i < newsSearch.results.length; i++) {
-
-            // Create HTML elements for search results
-            var p = document.createElement('p');
-            var a = document.createElement('a');
-            a.href="/news-search/v1/newsSearch.results[i].url";
-            a.innerHTML = newsSearch.results[i].title;
-
-            // Append search results to the HTML nodes
-            p.appendChild(a);
-            document.body.appendChild(p);
-          }
-        }
-      }
-
-      function onLoad() {
-
-        // Create a News Search instance.
-        newsSearch = new google.search.NewsSearch();
-  
-        // Set searchComplete as the callback function when a search is 
-        // complete.  The newsSearch object will have results in it.
-        newsSearch.setSearchCompleteCallback(this, searchComplete, null);
-
-        // Specify search quer(ies)
-        newsSearch.execute('Technology');
-
-        // Include the required Google branding
-   //     google.search.Search.getBranding('branding');
-      }
-
-      // Set a callback to call your code when the page loads
-      google.setInstance.setOnLoadCallback(onLoad);
-    </script>
 </head>
 <body>
 	<!-- Header -->
-	
 	<div id="header" class="shell">
 		<div id="logo"><h1><a href="#">The Manipal Newsletter</a></h1><span><a href="#">Keep yourself up!</a></span></div>
 		<!-- Navigation -->
 		<div id="navigation">
 			<ul>
-				<li><a href="home.html">Home</a></li>
+				<li><a href="#" class="active">Home</a></li>
 				<li><a href="blogs.html">Blogs</a></li>
-				<li><a href="#" class="active">Articles</a></li>
+				<li><a href="#">Articles</a></li>
 				<li><a href="#"></a></li>
 				<li><a href="#">About Us</a></li>
 				<li><a href="#">Contacts</a></li>
@@ -167,7 +118,7 @@
 				<li>
 					<h4>Star Authors</h4>
 					<ul>
-						<li><a href="www.github.com/amolgupta007">Amol</a></li>
+						<li><a href="#">Amol</a></li>
 						<li><a href="#">Santosh</a></li>
 						<li><a href="#">Maitreyi</a></li>
 						<li><a href="#">Srinivas</a></li>
@@ -183,22 +134,122 @@
 				</li>
 			</ul>
 		</div>
-		<!-- End Sidebar --><br><br>
-		<div id="content">Loading...<br><br>
-		<form method="get" action="api.html">
-   		 	<button type="submit">Get Updates</button>
-		</form>
-
-		</div><br><br>
-		
-		<br><br>
+		<!-- End Sidebar -->
 		<!-- Content -->
 		<div id="content">
-			<!-- articles -->
-			<div>
-			
+			<!-- Products -->
+			<div class="articles">
+				<h3>Featured Articles</h3>
+				<ul>
+					<li>
+						<div class="article">
+							<a href="#" class="info">
+								<span class="holder">
+									<img src="css/images/imag1.jpg" alt="" />
+									<span class="head-line">The Manipal Newsletter launches its website</span>
+									<span class="author">by Amol Gupta</span>
+									<span class="description">Well in advance the developers have launched the TMN <br />website.</span>
+								</span>
+							</a>
+							<a href="#" class="read_more">Read More </a>
+						</div>
+					</li>
+					<li>
+						<div class="article">
+							<a href="#" class="info">
+								<span class="holder">
+									<img src="images/sports.jpg" alt="" />
+									<span class="head-line">Head line</span>
+									<span class="author">by John Smith</span>
+									<span class="description">Maecenas vehicula ante eu enim pharetra<br />scelerisque dignissim <br />sollicitudin nisi</span>
+								</span>
+							</a>
+							<a href="#" class="read_more">Read More </a>
+						</div>
+					</li>
+					<li>
+						<div class="article">
+							<a href="#" class="info">
+								<span class="holder">
+									<img src="css/images/image03.jpg" alt="" />
+									<span class="head-line">Head line</span>
+									<span class="author">by John Smith</span>
+									<span class="description">Maecenas vehicula ante eu enim pharetra<br />scelerisque dignissim <br />sollicitudin nisi</span>
+								</span>
+							</a>
+							<a href="#" class="read_more">Read More </a>
+						</div>
+					</li>
+					<li>
+						<div class="article">
+							<a href="#" class="info">
+								<span class="holder">
+									<img src="css/images/image04.jpg" alt="" />
+									<span class="head-line">Head line</span>
+									<span class="author">by John Smith</span>
+									<span class="description">Maecenas vehicula ante eu enim pharetra<br />scelerisque dignissim <br />sollicitudin nisi</span>
+								</span>
+							</a>
+							<a href="#" class="read_more">Read More </a>
+						</div>
+					</li>
+					<li>
+						<div class="article">
+							<a href="#" class="info">
+								<span class="holder">
+									<img src="css/images/image05.jpg" alt="" />
+									<span class="head-line">Head line</span>
+									<span class="author">by John Smith</span>
+									<span class="description">Maecenas vehicula ante eu enim pharetra<br />scelerisque dignissim <br />sollicitudin nisi</span>
+								</span>
+							</a>
+							<a href="#" class="read_more">Read More </a>
+						</div>
+					</li>
+					<li>
+						<div class="article">
+							<a href="#" class="info">
+								<span class="holder">
+									<img src="css/images/image06.jpg" alt="" />
+									<span class="head-line">Head line</span>
+									<span class="author">by John Smith</span>
+									<span class="description">Maecenas vehicula ante eu enim pharetra<br />scelerisque dignissim <br />sollicitudin nisi</span>
+								</span>
+							</a>
+							<a href="#" class="read_more">Read More </a>
+						</div>
+					</li>
+					<li>
+						<div class="article">
+							<a href="#" class="info">
+								<span class="holder">
+									<img src="css/images/image07.jpg" alt="" />
+									<span class="head-line">Head line</span>
+									<span class="author">by John Smith</span>
+									<span class="description">Maecenas vehicula ante eu enim pharetra<br />scelerisque dignissim <br />sollicitudin nisi</span>
+								</span>
+							</a>
+							<a href="#" class="read_more">Read More </a>
+						</div>
+					</li>
+					<li>
+						<div class="article">
+							<a href="#" class="info">
+								<span class="holder">
+									<img src="css/images/image08.jpg" alt="" />
+									<span class="head-line">Head line</span>
+									<span class="author">by John Smith</span>
+									<span class="description">Maecenas vehicula ante eu enim pharetra<br />scelerisque dignissim <br />sollicitudin nisi</span>
+								</span>
+							</a>
+							<a href="#" class="read_more">Read More </a>
+						</div>
+					</li>
+				</ul>
+			<!-- End Products -->
+			</div>
 			<div class="cl">&nbsp;</div>
-			<!-- 5 min read -->
+			<!-- Best-sellers -->
 			<div id="five_minread">
 				<h3>5 Minute Read</h3>
 				<ul>
@@ -277,14 +328,14 @@
 							<a href="#">
 								<img src="css/images/image-best04.jpg" alt="" />
 								<span class="head-line">Head line </span>
-								<span class="author">by john</span>
+								<span class="author">by John Smith</span>
 								
 							</a>
 						</div>
 					</li>
 				</ul>
-			</div></div> 
-			<!-- End 5 min read -->
+			</div>
+			<!-- End Best-sellers -->
 		</div>
 		<!-- End Content -->
 		<div class="cl">&nbsp;</div>
